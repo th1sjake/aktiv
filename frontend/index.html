@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учет активности отдела</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="events.html">📅 Посмотреть проведённые мероприятия</a>
+
+    <h1>📊 Учет активности отдела</h1>
+
+    <!-- 🔹 Добавление сотрудника -->
+    <section>
+        <h2>Добавить сотрудника</h2>
+        <input type="text" id="nickname" placeholder="Ник">
+        <input type="text" id="static" placeholder="Статик">
+        <button onclick="addEmployee()">Добавить</button>
+    </section>
+
+    <!-- 🔹 Таблица сотрудников -->
+    <section>
+        <h2>Сотрудники</h2>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Ник</th>
+                    <th>Статик</th>
+                    <th>Баллы</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button onclick="resetPoints()">Сбросить баллы</button>
+    </section>
+
+    <!-- 🔹 Создание события -->
+    <section>
+        <h2>Создать событие</h2>
+        <input type="text" id="eventName" placeholder="Название">
+        <input type="datetime-local" id="eventDateTime">  <!-- Дата + время -->
+        <input type="number" id="eventPoints" placeholder="Баллы">
+    
+        <h3>Выберите участников:</h3>
+        <div id="participantsList"></div>
+    
+        <button class="create-btn" onclick="addEvent()">Создать</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
